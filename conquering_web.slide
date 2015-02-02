@@ -69,3 +69,7 @@ www.github.com/sescobb27
 * Tests
 - httprouter Lib Tests
 .code httprouter_test.go /START OMIT/,/END OMIT/
+
+* Streaming
+- ´http://localhost:5000/?filename=/home/kiro/Documents/Go/src/index.html´
+.play files_on_demand.go /START OMIT/,/END OMIT/
