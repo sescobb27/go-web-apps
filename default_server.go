@@ -11,10 +11,6 @@ func main() {
     server := http.NewServeMux()
     server.Handle("/categories", Get(GetCategories))
     server.Handle("/locations", Get(GetLocations))
-    server.Handle("/images/",
-        http.StripPrefix("/images/",
-            http.FileServer(
-                http.Dir("resources/images"))))
     server.Handle("/css/",
         http.StripPrefix("/css/",
             http.FileServer(

@@ -52,12 +52,20 @@ www.github.com/sescobb27
 
 * Servers
 - Default Server For Go
+    func GetCategories(res http.ResponseWriter, req *http.Request) {}
+    func GetLocations(res http.ResponseWriter, req *http.Request) {}
 .code default_server.go /START OMIT/,/END OMIT/
 
 * Servers
 - httprouter lib
+    func Categories_Handler(res http.ResponseWriter, req *http.Request, _ httprouter.Params) {}
+    func Locations_Handler(res http.ResponseWriter, req *http.Request, _ httprouter.Params) {}
 .code httprouter_server.go /START OMIT/,/END OMIT/
 
-
+* Tests
+- Default Server Tests
+.code default_test.go /START OMIT/,/END OMIT/
 
 * Tests
+- httprouter Lib Tests
+.code httprouter_test.go /START OMIT/,/END OMIT/

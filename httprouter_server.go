@@ -6,21 +6,11 @@ import (
     "os"
 )
 
-// FUNCTION OMIT
-func Categories_Handler(res http.ResponseWriter, req *http.Request, _ httprouter.Params) {}
-
-func Locations_Handler(res http.ResponseWriter, req *http.Request, _ httprouter.Params) {}
-
-// END OMIT
-
 // START OMIT
 func main() {
     router := httprouter.New()
     router.GET("/categories", Categories_Handler)
     router.GET("/locations", Locations_Handler)
-    router.Handler("GET", "/images/*filename",
-        http.StripPrefix("/images/",
-            http.FileServer(http.Dir("resources/images"))))
     router.Handler("GET", "/css/*filename",
         http.StripPrefix("/css/",
             http.FileServer(http.Dir("resources/css"))))
