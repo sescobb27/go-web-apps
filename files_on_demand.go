@@ -44,6 +44,7 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, req *http.Request) {
     w.Header().Set("Access-Control-Allow-Origin", "*")
     w.Header().Set("Access-Control-Allow-Credentials", "true")
     w.Header().Set("Access-Control-Allow-Methods", "GET")
+    fmt.Printf("%v\n\n\n", req)
     http.ServeFile(w, req, path)
 }
 

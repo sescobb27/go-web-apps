@@ -1,10 +1,14 @@
+// +build ignore
+
 package main
 
 import (
     "github.com/julienschmidt/httprouter"
     "net/http"
-    "os"
 )
+
+func Categories_Handler(res http.ResponseWriter, req *http.Request, _ httprouter.Params) {}
+func Locations_Handler(res http.ResponseWriter, req *http.Request, _ httprouter.Params)  {}
 
 // START OMIT
 func main() {

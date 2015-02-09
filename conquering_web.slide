@@ -1,6 +1,6 @@
 Conquering the web with golang
 Medellin
-2 Feb 2015
+3 Feb 2015
 Tags: go, golang, web, http
 
 Simon Escobar B
@@ -25,8 +25,7 @@ www.github.com/sescobb27
         )
         http.DefaultClient.Do(req)
 
-        resp, err := http.PostForm(
-            "http://example.com/form",
+        resp, err := http.PostForm("http://example.com/form",
             url.Values{
                 "username": {"test"},
                 "email":    {"test@gmail.com"},
@@ -71,5 +70,4 @@ www.github.com/sescobb27
 .code httprouter_test.go /START OMIT/,/END OMIT/
 
 * Streaming
-- ´http://localhost:5000/?filename=/home/kiro/Documents/Go/src/index.html´
 .play files_on_demand.go /START OMIT/,/END OMIT/

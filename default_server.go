@@ -1,9 +1,10 @@
+// +build ignore
+
 package main
 
 import (
     . "github.com/sescobb27/meetup/handlers"
     "net/http"
-    "os"
 )
 
 // START OMIT
